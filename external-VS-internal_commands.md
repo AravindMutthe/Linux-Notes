@@ -43,12 +43,12 @@
 - If command present in the location mentioned in $PATH variable shell will execute it , otherwise it will give error.
 
 
-#### 1. How to find out whether a command is internal or external?
-type command:
-$ type cd
-cd is a shell builtin
-$ type cat
-cat is /bin/cat
+## 1. How to find out whether a command is internal or external?
+*type command:*
+> $ type cd
+> cd is a shell builtin
+> $ type cat
+>cat is /bin/cat
 - For the internal commands, the type command will clearly say its shell built-in, 
 - however for the external commands, it gives the path of the command from where it is executed.
 
