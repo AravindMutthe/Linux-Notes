@@ -267,7 +267,7 @@ Daemon to periodically flush filesystem buffers (optional)
 * All files in /usr usually come from a Linux distribution;
 * locally installed programs and other stuff goes below /usr/local.
 * means that /usr should be shareable between various FHS-compliant hosts and must not be written to.
-* The following directories, or symbolic links to directories, are required in /usr.
+***The following directories, or symbolic links to directories, are required in /usr***
 
 1. bin:	Most user commands
 2. lib:	Libraries
