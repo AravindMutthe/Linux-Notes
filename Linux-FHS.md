@@ -54,9 +54,9 @@ if the corresponding subsystem is installed, The following directories, or symbo
 - /dev/fd0: The first floppy drive.
 - /dev/fb0: The first framebuffer device. A framebuffer is an abstraction layer between software and graphics hardware.
 - /dev/hda: it is the master IDE drive on the primary IDE controller. /dev/hdb the slave drive on the primary controller. 
-          - /dev/hdc,and /dev/hdd are the master and slave devices on the secondary controller respectively.     
-          -  each disk is divided into partitions
-          - Partitions 1-4 are primary partitions and partitions 5 and above are logical partitions inside extended partitions. 
+    - /dev/hdc,and /dev/hdd are the master and slave devices on the secondary controller respectively.     
+    -  each disk is divided into partitions
+    - Partitions 1-4 are primary partitions and partitions 5 and above are logical partitions inside extended partitions. 
 
 - /dev/sda: The first SCSI drive on the first SCSI bus.   
 - /dev/ttyS0: The first serial port. Many times this it the port used to connect an external modem to your system.
