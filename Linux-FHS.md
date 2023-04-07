@@ -244,28 +244,28 @@ update	    Daemon to periodically flush filesystem buffers (optional)
 
 
 
-#chapter 2: The /usr File System #
+# chapter 2: The /usr Directory Structure
 
-*/usr is the second major section of the filesystem. /usr is shareable, read-only data.
+* /usr is the second major section of the filesystem. /usr is shareable, read-only data.
 * The /usr filesystem is often large, since all programs are installed there.
 * All files in /usr usually come from a Linux distribution;
 * locally installed programs and other stuff goes below /usr/local.
 * means that /usr should be shareable between various FHS-compliant hosts and must not be written to.
 * The following directories, or symbolic links to directories, are required in /usr.
 
-1.bin:	Most user commands
-2.lib:	Libraries
-3.local:	Local hierarchy (empty after main installation)
-4.sbin:	Non-vital system binaries
-5.share:	Architecture-independent data
+1. bin:	Most user commands
+2. lib:	Libraries
+3. local:	Local hierarchy (empty after main installation)
+4. sbin:	Non-vital system binaries
+5. share:	Architecture-independent data
 
-Specific Options
+***Specific Options***
 
-1.games:	Games and educational binaries (optional)
-2.include:	Header files included by C programs
-3.libexec:	Binaries run by other programs (optional)
-4.lib<qual>:	Alternate Format Libraries (optional)
-5.src:	Source code (optional)
+1. games:	Games and educational binaries (optional)
+2. include:	Header files included by C programs
+3. libexec:	Binaries run by other programs (optional)
+4. lib<qual>:	Alternate Format Libraries (optional)
+5. src:	Source code (optional)
 
 1. /bin: This is the primary directory of executable commands on the system.
 * There must be no subdirectories in /usr/bin.
@@ -286,7 +286,7 @@ perl,python,tclsh,wish,expect.
 * The /usr/local hierarchy is for use by the system administrator when installing software locally. 
 * The place for locally installed software and other files.
 
-6./usr/share : Architecture-independent data
+6. /usr/share : Architecture-independent data
 * The /usr/share hierarchy is for all read-only architecture independent data files.
 * This hierarchy is intended to be shareable among all architecture platforms of a given OS;
 * The following directories, or symbolic links to directories, must be in /usr/share
