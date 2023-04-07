@@ -204,9 +204,8 @@ if the corresponding subsystem is installed, The following directories, or symbo
 ## /sbin: 
 **System binaries**
 
-* Utilities used for system administration (and other root-only commands) are stored in /sbin, /usr/sbin,and /usr/local/sbin.()
-* /sbin contains binaries essential for booting, restoring, recovering, and/or repairing the system in addition to the binaries in /bin.
- (Originally, /sbin binaries were kept in /etc. )
+* Utilities used for system administration (and other root-only commands) are stored in /sbin, /usr/sbin,and /usr/local/sbin.
+* /sbin contains binaries essential for booting, restoring, recovering, and/or repairing the system in addition to the binaries in /bin.(Originally, /sbin binaries were kept in /etc. )
 * Locally-installed system administration programs should be placed into /usr/local/sbin
 * There must be no subdirectories in /sbin.
 * it contains shutdown	Command to bring the system down.
@@ -283,32 +282,30 @@ Daemon to periodically flush filesystem buffers (optional)
 4. lib<qual>:	Alternate Format Libraries (optional)
 5. src:	Source code (optional)
 
-1. /bin: This is the primary directory of executable commands on the system.
-* There must be no subdirectories in /usr/bin.
-* The following files, or symbolic links to files, must be in /usr/bin,
-perl,python,tclsh,wish,expect.
+1. /bin: **This is the primary directory of executable commands on the system.**
+  * There must be no subdirectories in /usr/bin.
+  * The following files, or symbolic links to files, must be in /usr/bin, perl,python,tclsh,wish,expect.
 
-2./usr/include : Directory for standard include files.
-* this is where all of the system's general-use include files for the C programming language should be placed.
-* it contains bsd dir 
+2. /usr/include: **Directory for standard include files.**
+  * this is where all of the system's general-use include files for the C programming language should be placed.
+  * it contains bsd dir 
 
-3. /usr/lib : Libraries for programming and packages
-*/usr/lib includes object files and libraries.
+3. /usr/lib: **Libraries for programming and packages**
+  * /usr/lib includes object files and libraries.
 
-4. /usr/libexec : Binaries run by other programs (optional)
-* /usr/libexec includes internal binaries that are not intended to be executed directly by users or shell scripts. 
+4. /usr/libexec:** Binaries run by other programs (optional)**
+  * /usr/libexec includes internal binaries that are not intended to be executed directly by users or shell scripts. 
 
-5. /usr/local : Local hierarchy
-* The /usr/local hierarchy is for use by the system administrator when installing software locally. 
-* The place for locally installed software and other files.
+5. /usr/local: **Local hierarchy**
+  * The /usr/local hierarchy is for use by the system administrator when installing software locally. 
+  * The place for locally installed software and other files.
 
-6. /usr/share : Architecture-independent data
-* The /usr/share hierarchy is for all read-only architecture independent data files.
-* This hierarchy is intended to be shareable among all architecture platforms of a given OS;
-* The following directories, or symbolic links to directories, must be in /usr/share
-Directory	Description
-  * man	Online manuals
-  * misc	Miscellaneous architecture-independent data
+6. /usr/share: **Architecture-independent data**
+  * The /usr/share hierarchy is for all read-only architecture independent data files.
+  * This hierarchy is intended to be shareable among all architecture platforms of a given OS;
+  ***The following directories, or symbolic links to directories, must be in /usr/share***
+  1. man	Online manuals
+  2. misc	Miscellaneous architecture-independent data
 
 # chapter-3 The /var Directory Structure
 * /var contains data that is changed when the system is running normally
