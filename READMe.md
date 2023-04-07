@@ -6,7 +6,7 @@
 - bc
 - script
  
-# 2. ['Email Basics'](#Email) 
+# 2. [Email Basics] 
 - mailx
 - passwd
 - who
