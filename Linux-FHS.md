@@ -4,7 +4,7 @@
 - It Contains following directories, or symbolic links to directories,
 - root filesystem should generally be small, since it contains very critical files and a small, infrequently modified filesystem has a better chance of not getting corrupted.
 
-1. [/bin:](#/bin)	    Essential command binaries
+1. [/bin:](#/bin:)	    Essential command binaries
 2. [/boot:](#/boot)	Static files of the boot loader
 3. [/dev:](#/dev)	    Device files
 4. [/etc:](#/etc)	    Host-specific system configuration
@@ -24,7 +24,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 - lib<qual>:	Alternate format essential shared libraries (optional)
 - root:	Home directory for the root user (optional)
 
-# 1. /bin
+/bin
 * /bin contains commands that may be used by both the system administrator and by users, 
    but which are required when no other filesystems are mounted (e.g. in single user mode). 
 * It may also contain commands which are used indirectly by 
