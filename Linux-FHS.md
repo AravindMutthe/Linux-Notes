@@ -4,28 +4,27 @@
 - It Contains following directories, or symbolic links to directories,
 - root filesystem should generally be small, since it contains very critical files and a small, infrequently modified filesystem has a better chance of not getting corrupted.
 
-1. ['bin'](#bin):	    Essential command binaries
-2. ['boot'](#):	Static files of the boot loader
-3. dev:	    Device files
-4. etc:	    Host-specific system configuration
-5. lib:	    Essential shared libraries and kernel modules
-6. media:	Mount point for removable media
-7. mnt:	    Mount point for mounting a filesystem temporarily
-8. opt:	    Add-on application software packages
-9. run:	    Data relevant to running processes
-10. sbin:	Essential system binaries
-11. srv:	Data for services provided by this system
-12. tmp:	Temporary files
-13. usr:	Secondary hierarchy
-14. var:	Variable data  
+1. ['/bin:'](#/bin)	    Essential command binaries
+2. ['/boot:'](#/boot)	Static files of the boot loader
+3. ['/dev']:(#/dev)	    Device files
+4. [/etc:](#/etc)	    Host-specific system configuration
+5. [/lib:](#/lib)	    Essential shared libraries and kernel modules
+6. [/media:](#/media)	Mount point for removable media
+7. [/mnt:](#/mnt)	    Mount point for mounting a filesystem temporarily
+8. [/opt:](#/opt)	    Add-on application software packages
+9. [/run:](#/run)	    Data relevant to running processes
+10. [/sbin:](#/sbin)	Essential system binaries
+11. [/srv:](#/srv)	Data for services provided by this system
+12. [/tmp:](#/tmp)	Temporary files
+13. [/usr:](#/usr)	Secondary hierarchy
+14. [/var:](#/var)	Variable data  
 
 if the corresponding subsystem is installed, The following directories, or symbolic links to directories, must be in /
 - home:	User home directories (optional)
 - lib<qual>:	Alternate format essential shared libraries (optional)
 - root:	Home directory for the root user (optional)
 
---------------------------1./bin:-----------------------------------------------------------------------------
-
+# 1. /bin
 * /bin contains commands that may be used by both the system administrator and by users, 
    but which are required when no other filesystems are mounted (e.g. in single user mode). 
 * It may also contain commands which are used indirectly by 
