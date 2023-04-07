@@ -211,7 +211,6 @@ if the corresponding subsystem is installed, The following directories, or symbo
 * There must be no subdirectories in /sbin.
 * it contains shutdown	Command to bring the system down.
 * The following files, or symbolic links to files, must be in /sbin if the corresponding subsystem is installed:
-
 fastboot	Reboot the system without checking the disks (optional)
 fasthalt	Stop the system without checking the disks (optional)
 fdisk	    Partition table manipulator (optional)
