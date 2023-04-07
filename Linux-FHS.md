@@ -54,10 +54,10 @@ if the corresponding subsystem is installed, The following directories, or symbo
 - /dev/fd0: The first floppy drive.
 - /dev/fb0: The first framebuffer device. A framebuffer is an abstraction layer between software and graphics hardware.
 - /dev/hda: it is the master IDE drive on the primary IDE controller. /dev/hdb the slave drive on the primary controller. 
-          * /dev/hdc,and /dev/hdd are the master and slave devices on the secondary controller respectively.     
-          *  each disk is divided into partitions
-          * Partitions 1-4 are primary partitions and partitions 5 and above are logical partitions inside extended partitions. 
-          * 
+          - /dev/hdc,and /dev/hdd are the master and slave devices on the secondary controller respectively.     
+          -  each disk is divided into partitions
+          - Partitions 1-4 are primary partitions and partitions 5 and above are logical partitions inside extended partitions. 
+
 - /dev/sda: The first SCSI drive on the first SCSI bus.   
 - /dev/ttyS0: The first serial port. Many times this it the port used to connect an external modem to your system.
 
@@ -71,40 +71,40 @@ if the corresponding subsystem is installed, The following directories, or symbo
 * it must be static and cannot be an executable binary.(Executable binary" in this context refers to direct machine code or pseudocode not in a human-readable format, such as native ELF executables. )
 * No binaries may be located under /etc.
 * it contain the /opt dir:	Configuration for /opt
-* The following files, or symbolic links to files, must be in /etc if the corresponding subsystem is installed:
+##### The following files, or symbolic links to files, must be in /etc if the corresponding subsystem is installed:
 
 
-csh.login:	Systemwide initialization file for C shell logins (optional)
-exports	NFS filesystem access control list (optional)
-fstab:   	Static information about filesystems (optional)
-ftpusers:	FTP daemon user access control list (optional)
-gateways:	File which lists gateways for routed (optional)
-gettydefs:	Speed and terminal settings used by getty (optional)
-group:	User group file (optional)
-host.conf	Resolver configuration file (optional)
-hosts:	    Static information about host names (optional)
-hosts.allow:	Host access file for TCP wrappers (optional)
-hosts.deny:	Host access file for TCP wrappers (optional)
-hosts.equiv: 	List of trusted hosts for rlogin, rsh, rcp (optional)
-hosts.lpd: 	    List of trusted hosts for lpd (optional)
-inetd.conf: 	Configuration file for inetd (optional)
-inittab:    	Configuration file for init (optional)
-issue:  	    Pre-login message and identification file (optional)
-ld.so.conf: 	List of extra directories to search for shared libraries (optional)
-motd:	Post-login message of the day file (optional)
-mtab:	Dynamic information about filesystems (optional)
-mtools.conf:	Configuration file for mtools (optional)
-networks:	Static information about network names (optional)
-passwd:	The password file (optional)
-printcap	The lpd printer capability database (optional)
-profile	Systemwide initialization file for sh shell logins (optional)
-protocols	IP protocol listing (optional)
-resolv.conf	Resolver configuration file (optional)
-rpc	RPC protocol listing (optional)
-securetty	TTY access control for root login (optional)
-services	Port names for network services (optional)
-shells	Pathnames of valid login shells (optional)
-syslog.conf	Configuration file for syslogd (optional)
+1. csh.login:	Systemwide initialization file for C shell logins (optional)
+2. exports: 	NFS filesystem access control list (optional)
+3. fstab:   	Static information about filesystems (optional)
+4. ftpusers:	FTP daemon user access control list (optional)
+5. gateways:	File which lists gateways for routed (optional)
+6. gettydefs:	Speed and terminal settings used by getty (optional)
+7. group:   	User group file (optional)
+8. host.conf	Resolver configuration file (optional)
+9. hosts:	    Static information about host names (optional)
+10. hosts.allow:	Host access file for TCP wrappers (optional)
+11. hosts.deny: 	Host access file for TCP wrappers (optional)
+12. hosts.equiv: 	List of trusted hosts for rlogin, rsh, rcp (optional)
+13. hosts.lpd: 	    List of trusted hosts for lpd (optional)
+14. inetd.conf: 	Configuration file for inetd (optional)
+15. inittab:    	Configuration file for init (optional)
+16. issue:  	    Pre-login message and identification file (optional)
+17. ld.so.conf: 	List of extra directories to search for shared libraries (optional)
+18. motd:	        Post-login message of the day file (optional)
+19. mtab:	        Dynamic information about filesystems (optional)
+20. mtools.conf:	Configuration file for mtools (optional)
+21. networks:	    Static information about network names (optional)
+22. passwd:	        The password file (optional)
+23. printcap:   	The lpd printer capability database (optional)
+24. profile	        Systemwide initialization file for sh shell logins (optional)
+25. protocols	    IP protocol listing (optional)
+26. resolv.conf	Resolver configuration file (optional)
+27. rpc	RPC protocol listing (optional)
+28. securetty	TTY access control for root login (optional)
+29. services	Port names for network services (optional)
+30. shells	Pathnames of valid login shells (optional)
+31. syslog.conf	Configuration file for syslogd (optional)
 
 
 /etc/passwd: The user database,
