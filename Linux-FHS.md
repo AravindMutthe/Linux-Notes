@@ -291,9 +291,9 @@ perl,python,tclsh,wish,expect.
 * This hierarchy is intended to be shareable among all architecture platforms of a given OS;
 * The following directories, or symbolic links to directories, must be in /usr/share
 Directory	Description
-man	Online manuals
-misc	Miscellaneous architecture-independent data
-* 
+  * man	Online manuals
+  * misc	Miscellaneous architecture-independent data
+
 # The /var Directory Structure
 * /var contains data that is changed when the system is running normally
 * it is specific for each system, i.e., not shared over the network with other computers. 
@@ -313,8 +313,8 @@ misc	Miscellaneous architecture-independent data
 
 
 
-##################################  The /proc filesystem #######################################
+# The /proc Directory Structure
 
--The /proc filesystem contains a illusionary filesystem.
--It does not exist on a disk. Instead, the kernel creates it in memory. 
--It is used to provide information about the system
+- The /proc filesystem contains a illusionary filesystem.
+- It does not exist on a disk. Instead, the kernel creates it in memory. 
+- It is used to provide information about the system
