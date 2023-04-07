@@ -1,14 +1,15 @@
-Container images are templates from which containers are created.
-Each individual layer contains files and folders. 
+### Container-images
+- Container images are templates from which containers are created.
+- Each individual layer contains files and folders. 
 
-Each layer only contains the changes to the filesystem with respect to the underlying layers. 
-Docker uses a Union filesystem.
-These images are not made up of just one monolithic block but are composed of many layers.
+- Each layer only contains the changes to the filesystem with respect to the underlying layers. 
+- ***Docker uses a Union filesystem.***
+- These images are not made up of just one monolithic block but are composed of many layers.
 
-Mastering Containers — 
-to create a virtual filesystem out of the set of layers. 
-A storage driver handles the details regarding the way these layers interact with each other. 
-Different storage drivers are available that have advantages and disadvantages in different situations.
+##### Mastering Containers — 
+- to create a virtual filesystem out of the set of layers. 
+- A storage driver handles the details regarding the way these layers interact with each other. 
+- Different storage drivers are available that have advantages and disadvantages in different situations.
 
 ## 1. Manageing ports:
 
