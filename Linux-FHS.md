@@ -304,11 +304,12 @@ misc	Miscellaneous architecture-independent data
     - syslog= /var/log/messages ->  where all kernel and system program message are usually stored.
     - Files in /var/log can often grow indefinitely, and may require cleaning at regular intervals.
 2. var/mail: This is the FHS approved location for user mailbox files.
-          - these files may still be held in /var/spool/mail. 
+    - these files may still be held in /var/spool/mail. 
 3. /var/run: Files that contain information about the system that is valid until the system is next booted. 
-           For example, /var/run/utmp contains information about people currently logged in.
+    - For example, /var/run/utmp contains information about people currently logged in.
 4. /var/lock: Lock files. 
-           Many programs follow a convention to create a lock file in /var/lock to indicate that they are using a particular device              or file. Other programs will notice the lock file and won't attempt to use the device or file.
+    - Many programs follow a convention to create a lock file in /var/lock to indicate that they are using a particular device or file. 
+    - Other programs will notice the lock file and won't attempt to use the device or file.
 
 
 
