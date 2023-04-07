@@ -32,7 +32,8 @@ if the corresponding subsystem is installed, The following directories, or symbo
 * There must be no subdirectories in /bin.
 
 
-# /boot: Static files of the boot loader
+# /boot: 
+**Static files of the boot loader**
 * Contains Files used by the bootstrap loader,ex GRUB,LILO.
 * Kernel images are often kept here instead of in the root directory. 
 * This directory contains everything required for the boot process except configuration files not needed at boot time and the map installer.
@@ -42,36 +43,37 @@ if the corresponding subsystem is installed, The following directories, or symbo
 * The /dev/MAKEDEV.local is a script written by the system administrator that creates local-only device files or links
 
 
---------------------------3. /dev : Device files------------------------------
+# /dev : 
+**Device files**
  * the purpose of /dev directory is to locate special or device files.
  * it is possible that devices in /dev will need to be manually created
  * /dev must contain a command named MAKEDEV, which can create devices as needed. 
  * It may also contain a MAKEDEV.local for any local devices.
  * The device files are created during installation, and later with the /dev/MAKEDEV script
 
-/dev/fd0: The first floppy drive.
-/dev/fb0: The first framebuffer device. A framebuffer is an abstraction layer between software and graphics hardware.
-/dev/hda: it is the master IDE drive on the primary IDE controller. /dev/hdb the slave drive on the primary controller. 
+- /dev/fd0: The first floppy drive.
+- /dev/fb0: The first framebuffer device. A framebuffer is an abstraction layer between software and graphics hardware.
+- /dev/hda: it is the master IDE drive on the primary IDE controller. /dev/hdb the slave drive on the primary controller. 
           * /dev/hdc,and /dev/hdd are the master and slave devices on the secondary controller respectively.     
           *  each disk is divided into partitions
           * Partitions 1-4 are primary partitions and partitions 5 and above are logical partitions inside extended partitions. 
           * 
-/dev/sda: The first SCSI drive on the first SCSI bus.   
-/dev/ttyS0: The first serial port. Many times this it the port used to connect an external modem to your system.
+- /dev/sda: The first SCSI drive on the first SCSI bus.   
+- /dev/ttyS0: The first serial port. Many times this it the port used to connect an external modem to your system.
 
     
-----------------------------4. /etc : Host-specific system configuration-----------------------------------------------------
+# /etc: 
+**Host-specific system configuration**
 
 * The purpose/etc hierarchy is to  contain the configuration files.
 *  A "configuration file" is a local file used to control the operation of a program; 
 * /etc may contain executable scripts, such as the command scripts commonly called by init to start and shut down the system and start daemon processes.
-* it must be static and cannot be an 
-    executable binary.(Executable binary" in this context refers to direct machine code or pseudocode not in a human-readable format, such as native ELF executables. )
+* it must be static and cannot be an executable binary.(Executable binary" in this context refers to direct machine code or pseudocode not in a human-readable format, such as native ELF executables. )
 * No binaries may be located under /etc.
 * it contain the /opt dir:	Configuration for /opt
-*he following files, or symbolic links to files, must be in /etc if the corresponding subsystem is installed:
+* The following files, or symbolic links to files, must be in /etc if the corresponding subsystem is installed:
 
-File	    Description
+
 csh.login:	Systemwide initialization file for C shell logins (optional)
 exports	NFS filesystem access control list (optional)
 fstab:   	Static information about filesystems (optional)
