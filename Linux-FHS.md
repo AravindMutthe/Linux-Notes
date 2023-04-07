@@ -14,10 +14,10 @@
 8. [`/opt:`](#opt)	    Add-on application software packages
 9. [`/run:`](#run)	    Data relevant to running processes
 10. [`/sbin:`](#sbin)	Essential system binaries
-11. [`/srv:`](#srv)	Data for services provided by this system
-12. [`/tmp:`](#tmp)	Temporary files
-13. [`/usr:`](#usr)	Secondary hierarchy
-14. [`/var:`](#var)	Variable data  
+11. [`/srv:`](#srv) 	Data for services provided by this system
+12. [`/tmp:`](#tmp)	    Temporary files
+13. [`/usr:`](#usr) 	Secondary hierarchy
+14. [`/var:`](#var)	    Variable data  
 
 if the corresponding subsystem is installed, The following directories, or symbolic links to directories, must be in /
 - home:	User home directories (optional)
@@ -32,9 +32,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 * There must be no subdirectories in /bin.
 
 
-boot 
-
-
+# /boot: Static files of the boot loader
 * Contains Files used by the bootstrap loader,ex GRUB,LILO.
 * Kernel images are often kept here instead of in the root directory. 
 * This directory contains everything required for the boot process except configuration files not needed at boot time and the map installer.
