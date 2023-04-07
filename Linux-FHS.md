@@ -115,7 +115,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 - /etc/inittab: Configuration file for init. 
 - /etc/mtab:  List of currently mounted filesystems. Initially set up by the bootup scripts, and updated automatically by the mount command.
 
-## /home: 
+## /home:
 **User home directories (optional)**
 
 * /home is a fairly standard concept, but it is clearly a site-specific filesystem.
@@ -127,7 +127,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
     for example /home/smith, /home/torvalds, /home/operator, etc
 * to find a user's home directory, use a library function such as getpwent, getpwent_r of fgetpwent rather than
  relying on /etc/passwd because user information may be stored remotely using systems such as NIS. 
-## /lib: 
+## /lib:
  **Essential shared libraries and kernel modules**
 * The /lib directory contains those shared library images needed to boot the system and run the commands in the root filesystem, ie. by binaries in /bin and /sbin.
  (Shared libraries that are only necessary for binaries in /usr (such as any X Window binaries) must not be in /lib. )
@@ -135,10 +135,10 @@ if the corresponding subsystem is installed, The following directories, or symbo
 
 
 
-## /lib<qual>: 
+## /lib<qual>:
 **Alternate format essential shared libraries (optional)**
 * This is commonly used for 64-bit or 32-bit support on systems which support multiple binary formats, but require libraries of the same name.
-## /media
+## /media:
 **Mount point for removable media**
 
 * it contains subdirectories which are used as mount points for removable media such as floppy disks, cdroms and zip disks.
@@ -151,7 +151,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
     * zip	Zip drive (optional)
 * mount directories can be created by appending a digit to the name of those available above starting with '0', but the unqualified name must also exist
 
-## /mnt
+## /mnt:
 **Mount point for a temporarily mounted filesystem**
 * directory is provided so that the system administrator may temporarily mount a filesystem as needed.
 * The content of this directory is a local issue and should not affect the manner in which any program is run.
@@ -160,7 +160,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 
 
 
-## /opt 
+## /opt: 
 **Add-on application software packages**
 
 * /opt is reserved for the installation of add-on application software packages.
@@ -180,7 +180,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 
 
 
-## /root
+## /root:
 **Home directory for the root user (optional)**
 
 * The root account's home directory may be determined by developer or local preference, but this is the recommended default location.
@@ -189,7 +189,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 
 
 
-## /run  
+## /run: 
 **Run-time variable data** 
 
 * This directory contains system information data describing the system since it was booted.
@@ -201,7 +201,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 
 
 
-## /sbin 
+## /sbin: 
 **System binaries**
 
 * Utilities used for system administration (and other root-only commands) are stored in /sbin, /usr/sbin,and /usr/local/sbin.()
@@ -232,11 +232,11 @@ update	    Daemon to periodically flush filesystem buffers (optional)
 
 
 
-## /srv
+## /srv:
 **Data for services provided by this system**
 * /srv contains site-specific data which is served by this system. 
 
-## /tmp 
+## /tmp:
 **Temporary files**
 * The /tmp directory must be made available for programs that require temporary files.
 * data stored in /tmp may be deleted in a site-specific manner, it is recommended that files and directories located in /tmp be deleted whenever the system is booted.
@@ -294,7 +294,7 @@ Directory	Description
   * man	Online manuals
   * misc	Miscellaneous architecture-independent data
 
-# The /var Directory Structure
+# chapter-3 The /var Directory Structure
 * /var contains data that is changed when the system is running normally
 * it is specific for each system, i.e., not shared over the network with other computers. 
 
@@ -313,7 +313,7 @@ Directory	Description
 
 
 
-# The /proc Directory Structure
+# chapter-4 The /proc Directory Structure
 
 - The /proc filesystem contains a illusionary filesystem.
 - It does not exist on a disk. Instead, the kernel creates it in memory. 
