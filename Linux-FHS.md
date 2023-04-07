@@ -211,23 +211,40 @@ if the corresponding subsystem is installed, The following directories, or symbo
 * There must be no subdirectories in /sbin.
 * it contains shutdown	Command to bring the system down.
 * The following files, or symbolic links to files, must be in /sbin if the corresponding subsystem is installed:
-1. fastboot	    Reboot the system without checking the disks (optional)
-2. fasthalt	    Stop the system without checking the disks (optional)
-3. fdisk	    Partition table manipulator (optional)
-4. fsck	         File system check and repair utility (optional)
-5. fsck.*	    File system check and repair utility for a specific filesystem (optional)
-6. getty	    The getty program (optional)
-7. halt	        Command to stop the system (optional)
-8. ifconfig	    Configure a network interface (optional)
-9. init	        Initial process (optional)
-10. mkfs	    Command to build a filesystem (optional)
-11. mkfs.*	    Command to build a specific filesystem (optional)
-12. mkswap	    Command to set up a swap area (optional)
-13. reboot	    Command to reboot the system (optional)
-14. route	    IP routing table utility (optional)
-15. swapon	    Enable paging and swapping (optional)
-16. swapoff	    Disable paging and swapping (optional)
-17. update	    Daemon to periodically flush filesystem buffers (optional)
+1. fastboot	    
+Reboot the system without checking the disks (optional)
+2. fasthalt	    
+Stop the system without checking the disks (optional)
+3. fdisk	    
+Partition table manipulator (optional)
+4. fsck	         
+File system check and repair utility (optional)
+5. fsck.*	    
+File system check and repair utility for a specific filesystem (optional)
+6. getty	    
+The getty program (optional)
+7. halt	        
+Command to stop the system (optional)
+8. ifconfig	    
+Configure a network interface (optional)
+9. init	        
+Initial process (optional)
+10. mkfs	    
+Command to build a filesystem (optional)
+11. mkfs.*	   
+ Command to build a specific filesystem (optional)
+12. mkswap	    
+Command to set up a swap area (optional)
+13. reboot	    
+Command to reboot the system (optional)
+14. route	    I
+P routing table utility (optional)
+15. swapon	    
+Enable paging and swapping (optional)
+16. swapoff	    
+Disable paging and swapping (optional)
+17. update	    
+Daemon to periodically flush filesystem buffers (optional)
 
 
 
