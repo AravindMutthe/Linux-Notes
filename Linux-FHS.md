@@ -210,7 +210,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 * Locally-installed system administration programs should be placed into /usr/local/sbin
 * There must be no subdirectories in /sbin.
 * it contains shutdown	Command to bring the system down.
-* The following files, or symbolic links to files, must be in /sbin if the corresponding subsystem is installed:
+***The following files, or symbolic links to files, must be in /sbin if the corresponding subsystem is installed:***
 1. fastboot	    
 Reboot the system without checking the disks (optional)
 2. fasthalt	    
