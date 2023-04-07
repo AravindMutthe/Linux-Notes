@@ -115,80 +115,50 @@ installation:
 	
 ## 8.KUBERNETEES:
 kubernetees is an orchestration framework for docker containers which helps expose containers as services to the outside world.
-  
-  ex: we have 2 services
-	   one service would contain ngnix nd mangoDB
-	   another contain  ngnix nd redis
-	   each service can have ip or service point 
-	   wch can be connected by other applications
-	   kubernetees used to manage these services.
-SUMMERY	   
-	   image --builds-> containers
-	   container-1(has port) ---runs>(application) it accesd via docker host port num
-	   container-2(has port) ---runs>(application)
+***ex: we have 2 services***
+- one service would contain ngnix nd mangoDB another contain  ngnix nd redis
+- each service can have ip or service point which can be connected by other applications.
+-  kubernetees used to manage these services.
+**SUMMERY**	   
+- image -> builds-> containers
+    - container-1(has port) ---runs>(application) it accesd via docker host port num
+	- container-2(has port) ---runs>(application)
 	   
-	   docker compose= runs containers as a service.
-	   service= multiple containers as single one
-	   service-1= c1,c2
-	   service-2= c3,c4,c1
-	   kubernetees=manages multiple services.
-	   kubernetees= service-1, service-2
+- docker compose= runs containers as a service.
+- service= multiple containers as single one
+	- service-1= c1,c2
+	- service-2= c3,c4,c1
+- kubernetees=manages multiple services.
+	- kubernetees= service-1, service-2
 	   
+###### Worker node: on wch all services run
+- We can have many worker nodes running at one point in time(cluster)
+- Each worker  node hosts one or more pod.
+- POD is like hosting a service
+- Each POD contains one or more docker containers
+- Each POD can host diff set of Docker containers  
+- Proxy used to control the exposing of these services to the outside world
 
 
-	   
-	   
-	   
-	   
-	   
-	   
-			
+**SUMMERY:**
 
+- Service-1(POD)-> contains---> one or more Docker containers 
+- Service-2(POD)-> contains---> one or more Docker containers 
+- Worker Node-> runs--> all services
+- Wn-1-> host--> one or more service(POD)
+- Wn-2-> host--> one or more service(POD)
+- Cluster-> runs--> many worker nodes works together to distribute the work load,clustering helps in fault tolerance
+- Kube-proxy-> controls--> services exposing
 
+**COMPONENTS:**
 
-
-
-
-
-
- 	docker compose= runs containers as a service.
-	   service= multiple containers as single one
-	   service-1= c1,c2
-	   service-2= c3,c4,c1
-	   kubernetees=manages multiple services.
-	   kubernetees= service-1, service-2
-
-Worker node: on wch all services run
-We can have many worker nodes running at one point in time(cluster)
-Each worker  node hosts one or more pod.
-POD is like hosting a service
-Each POD contains one or more docker containers
-Each POD can host diff set of Docker containers  
-Proxy used to control the exposing of these services to the outside world
-
-
-
-
-
-SUMMERY:
-
-Service-1(POD) --contains-- > one or more Docker containers 
-Service-2(POD) --contains-- > one or more Docker containers 
-WN ---runs--> all services
-Wn-1 --host--> one or more service(POD)
-Wn-2 --host--> one or more service(POD)
-Cluster --runs--> many worker nodes    works together to distribute the work load,clustering helps in fault tolerance
-Kube-proxy --controls--> services exposing
-
-COMPONENTS:
-
-Etcd:  used to store shared config and service discovery 
-	Various apps will able connect to the services via service discovery
-Controller-mngr: used to control kubernetes services
-Scheduler: used schedule the containers on hosts.which assigns Pods to Nodes.
-Api-server: used orchestrate the docker containers.
-Kublet: used to control the launching of containers via manifest files
-Kub-proxy:  used to provide network proxy services to the outside world
+1. Etcd: used to store shared config and service discovery 
+    - Various apps will able connect to the services via service discovery
+2. Controller-mngr: used to control kubernetes services
+3. Scheduler: used schedule the containers on hosts.which assigns Pods to Nodes.
+4. Api-server: used orchestrate the docker containers.
+5. Kublet: used to control the launching of containers via manifest files
+6. Kub-proxy:  used to provide network proxy services to the outside world
 
 
 
