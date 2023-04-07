@@ -4,8 +4,8 @@
 - It Contains following directories, or symbolic links to directories,
 - root filesystem should generally be small, since it contains very critical files and a small, infrequently modified filesystem has a better chance of not getting corrupted.
 
-1. [`/bin:`](#/bin:)	    Essential command binaries
-2. [`/boot:`](#/boot)	Static files of the boot loader
+1. [`/bin:`](#bin:)	    Essential command binaries
+2. [`/boot:`](#boot)	Static files of the boot loader
 3. [`/dev:`](#/dev)	    Device files
 4. [`/etc:`](#/etc)	    Host-specific system configuration
 5. [`/lib:`](#/lib)	    Essential shared libraries and kernel modules
