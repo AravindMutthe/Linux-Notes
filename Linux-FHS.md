@@ -1,5 +1,5 @@
 # Linux-Filesystem Hierarchy Standard
-### chapter 1 : / Root Directory Structure : 
+## chapter 1 : / Root Directory Structure : 
 
 - It Contains following directories, or symbolic links to directories,
 - root filesystem should generally be small, since it contains very critical files and a small, infrequently modified filesystem has a better chance of not getting corrupted.
@@ -24,7 +24,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 - lib<qual>:	Alternate format essential shared libraries (optional)
 - root:	Home directory for the root user (optional)
 
-# /bin:
+## /bin:
 * /bin contains commands that may be used by both the system administrator and by users, 
    but which are required when no other filesystems are mounted (e.g. in single user mode). 
 * It may also contain commands which are used indirectly by 
@@ -32,7 +32,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 * There must be no subdirectories in /bin.
 
 
-# /boot: 
+## /boot: 
 **Static files of the boot loader**
 * Contains Files used by the bootstrap loader,ex GRUB,LILO.
 * Kernel images are often kept here instead of in the root directory. 
@@ -43,7 +43,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 * The /dev/MAKEDEV.local is a script written by the system administrator that creates local-only device files or links
 
 
-# /dev : 
+## /dev : 
 **Device files**
  * the purpose of /dev directory is to locate special or device files.
  * it is possible that devices in /dev will need to be manually created
@@ -62,7 +62,7 @@ if the corresponding subsystem is installed, The following directories, or symbo
 - /dev/ttyS0: The first serial port. Many times this it the port used to connect an external modem to your system.
 
     
-# /etc: 
+## /etc: 
 **Host-specific system configuration**
 
 * The purpose/etc hierarchy is to  contain the configuration files.
@@ -107,60 +107,52 @@ if the corresponding subsystem is installed, The following directories, or symbo
 31. syslog.conf	Configuration file for syslogd (optional)
 
 
-/etc/passwd: The user database,
-/etc/shells: Lists trusted shells.( The chsh command allows users to change their login shell only to shells listed in this file)
-/etc/shadow:  is an encrypted file the holds user passwords.
-/etc/fstab:  Lists the filesystems mounted automatically at startup by the mount -a command (in /etc/rc or equivalent startup file). 
-/etc/group:  Similar to /etc/passwd, but describes groups instead of users.
-/etc/inittab: Configuration file for init. 
-/etc/mtab:  List of currently mounted filesystems. Initially set up by the bootup scripts, and updated automatically by the mount command.
+- /etc/passwd: The user database,
+- /etc/shells: Lists trusted shells.( The chsh command allows users to change their login shell only to shells listed in this file)
+- /etc/shadow:  is an encrypted file the holds user passwords.
+- /etc/fstab:  Lists the filesystems mounted automatically at startup by the mount -a command (in /etc/rc or equivalent startup file). 
+- /etc/group:  Similar to /etc/passwd, but describes groups instead of users.
+- /etc/inittab: Configuration file for init. 
+- /etc/mtab:  List of currently mounted filesystems. Initially set up by the bootup scripts, and updated automatically by the mount command.
 
----------------------------------5./home : User home directories (optional)----------------------------------
+## /home: 
+**User home directories (optional)**
 
 * /home is a fairly standard concept, but it is clearly a site-specific filesystem.
-*This section describes only a suggested placement for user home directories; 
+* This section describes only a suggested placement for user home directories; 
     nevertheless we recommend that all FHS-compliant distributions use this as the default location for user home directories.
 * The setup will differ from host to host.
 * User specific configuration files for applications are stored in the user's home directory in a file that starts with the '.' character (a "dot file"). 
 * ach user's home directory is typically implemented as a subdirectory directly under /home, 
     for example /home/smith, /home/torvalds, /home/operator, etc
-*to find a user's home directory, use a library function such as getpwent, getpwent_r of fgetpwent rather than
+* to find a user's home directory, use a library function such as getpwent, getpwent_r of fgetpwent rather than
  relying on /etc/passwd because user information may be stored remotely using systems such as NIS. 
-
-
-
-
---------------------------------6./lib : Essential shared libraries and kernel modules------------------------------
-
+## /lib: 
+ **Essential shared libraries and kernel modules**
 * The /lib directory contains those shared library images needed to boot the system and run the commands in the root filesystem, ie. by binaries in /bin and /sbin.
  (Shared libraries that are only necessary for binaries in /usr (such as any X Window binaries) must not be in /lib. )
 * it contains /modules dir: Loadable kernel modules (optional)
 
 
 
----------------------------------7./lib<qual> : Alternate format essential shared libraries (optional)--------------
-
+## /lib<qual>: 
+**Alternate format essential shared libraries (optional)**
 * This is commonly used for 64-bit or 32-bit support on systems which support multiple binary formats, but require libraries of the same name.
-
-
-
----------------------------------8./media : Mount point for removable media----------------------------------------------
+## /media
+**Mount point for removable media**
 
 * it contains subdirectories which are used as mount points for removable media such as floppy disks, cdroms and zip disks.
 * a number of other different places used to mount removable media such as /cdrom, /mnt or /mnt/cdrom.
 * Although the use of subdirectories in /mnt in root / as a mount point has recently been common, 
 * The following directories, or symbolic links to directories, must be in /media,if the corresponding subsystem is installed:
-    floppy	Floppy drive (optional)
-    cdrom	CD-ROM drive (optional)
-    cdrecorder	CD writer (optional)
-    zip	Zip drive (optional)
+    * floppy	Floppy drive (optional)
+    * cdrom	CD-ROM drive (optional)
+    * cdrecorder	CD writer (optional)
+    * zip	Zip drive (optional)
 * mount directories can be created by appending a digit to the name of those available above starting with '0', but the unqualified name must also exist
 
-
-
-
----------------------------------9./mnt : Mount point for a temporarily mounted filesystem--------------------------------
-
+## /mnt
+**Mount point for a temporarily mounted filesystem**
 * directory is provided so that the system administrator may temporarily mount a filesystem as needed.
 * The content of this directory is a local issue and should not affect the manner in which any program is run.
 * a suitable temporary directory not in use by the system must be used instead.
@@ -168,14 +160,15 @@ if the corresponding subsystem is installed, The following directories, or symbo
 
 
 
----------------------------------10. /opt : Add-on application software packages-----------------------------------------
+## /opt 
+**Add-on application software packages**
 
 * /opt is reserved for the installation of add-on application software packages.
 * A package to be installed in /opt must locate its static files in a separate /opt/<package> or /opt/<provider> directory tree,
 * where <package> is a name that describes the software package and <provider> is the provider's LANANA registered name.
  <package>	Static package objects
  <provider>	LANANA registered provider name
-* The directories 
+**The directories** 
    /opt/bin, 
    /opt/doc, 
    /opt/include, 
@@ -187,7 +180,8 @@ if the corresponding subsystem is installed, The following directories, or symbo
 
 
 
------------------------------------11./root : Home directory for the root user (optional)---------------------------------
+## /root
+**Home directory for the root user (optional)**
 
 * The root account's home directory may be determined by developer or local preference, but this is the recommended default location.
 * f the home directory of the root account is not stored on the root partition
@@ -195,19 +189,20 @@ if the corresponding subsystem is installed, The following directories, or symbo
 
 
 
-
-------------------------------------12./run : Run-time variable data  --------------------------------------------------
+## /run  
+**Run-time variable data** 
 
 * This directory contains system information data describing the system since it was booted.
 * Files under this directory must be cleared (removed or truncated as appropriate) at the beginning of the boot process.
 * The purposes of this directory were once served by /var/run.
 * Process identifier (PID) files, which were originally placed in /etc, must be placed in /run.
 * The naming convention for PID files is <program-name>.pid. 
-For example, the crond PID file is named /run/crond.pid.
+**For example, the crond PID file is named /run/crond.pid**
 
 
 
-------------------------------------13. /sbin : System binaries--------------------------------------------
+## /sbin 
+**System binaries**
 
 * Utilities used for system administration (and other root-only commands) are stored in /sbin, /usr/sbin,and /usr/local/sbin.()
 * /sbin contains binaries essential for booting, restoring, recovering, and/or repairing the system in addition to the binaries in /bin.
@@ -216,7 +211,7 @@ For example, the crond PID file is named /run/crond.pid.
 * There must be no subdirectories in /sbin.
 * it contains shutdown	Command to bring the system down.
 * The following files, or symbolic links to files, must be in /sbin if the corresponding subsystem is installed:
-Command	    Description
+
 fastboot	Reboot the system without checking the disks (optional)
 fasthalt	Stop the system without checking the disks (optional)
 fdisk	    Partition table manipulator (optional)
@@ -237,17 +232,19 @@ update	    Daemon to periodically flush filesystem buffers (optional)
 
 
 
-----------------------------------14. /srv : Data for services provided by this system-----------------------
+## /srv
+**Data for services provided by this system**
 * /srv contains site-specific data which is served by this system. 
 
------------------------------------15./tmp : Temporary files-------------------------------------------
-* he /tmp directory must be made available for programs that require temporary files.
+## /tmp 
+**Temporary files**
+* The /tmp directory must be made available for programs that require temporary files.
 * data stored in /tmp may be deleted in a site-specific manner, it is recommended that files and directories located in /tmp be deleted whenever the system is booted.
 
 
 
 
-############################ chapter 2: The /usr File System ######################################
+#chapter 2: The /usr File System #
 
 */usr is the second major section of the filesystem. /usr is shareable, read-only data.
 * The /usr filesystem is often large, since all programs are installed there.
