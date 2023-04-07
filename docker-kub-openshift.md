@@ -13,46 +13,38 @@
 
 ## 1. Manageing ports:
 
-
-image->builds-> containers -> have -> applications.
-
-containers themselves have port num.
+- image->builds-> containers -> have -> applications.
+- containers themselves have port num.
+- if you want access application inside container via port num, you need to map PORT NO OF CONTAINER  to the PORT NO OF DOCKER HOST.
  
- if you want access application inside container via port num, you need to map PORT NO OF CONTAINER  to the PORT NO OF DOCKER HOST.
- 
- sudo docker inspect PCM  // gives all port details
- sudo docker run -p docker host port num -p container port num container/image-
- sudo docker run -p 8080:8080 -p 50000:50000 pcm
+ > sudo docker inspect PCM         // gives all port details
+ > sudo docker run -p docker host port num -p container port num container/image-
+ > sudo docker run -p 8080:8080 -p 50000:50000 pcm
  
 ## 2. DOCKER FILE:
- 
- Instruction cmnds:
- 
- CMD:  used to execute a cmnd at runtime when the container executed.
-		syntax: CMD command param1
-		          comand to run when conatainer launced,
-				  param1 enterted to the command.
- ENTRYPOINT:This also used to execute cmnds at runtime for conatainer, its more flexible than CMD
-		syntax: CMD command param1
- ENV: used to set env variables in the conatainer.
-     	ENV key value
-	 key for the env variables.
-	 value for the env variables.
- WORKDIR:used to set working dir for the conatainer.
-     WORKDIR dirnmae
-	 
-	 dirnmae: new working dir,if it doesnt exist, it will be added
+**Instruction commands:**
+1. CMD: used to execute a cmnd at runtime when the container executed.
+> syntax: CMD command param1
+> comand to run when conatainer launched,
+> param1 enterted to the command.
+2. ENTRYPOINT:This also used to execute cmnds at runtime for conatainer, its more flexible than CMD
+>syntax: CMD command param1
+3. ENV: used to set env variables in the conatainer.
+> ENV key value
+    - key for the env variables.
+	- value for the env variables.
+4. WORKDIR:used to set working dir for the conatainer.
+    - WORKDIR dirnmae
+	- dirnmae: new working dir,if it doesnt exist, it will be added
 	 
 	 
 ## 3. STORAGE Drivers:
-
-docker has multiple storage drivers 
-storage driver allow one to work with underlying storage devices,
-diff storage drivers,
-overlay
-aufs
-brtfs
-
+- docker has multiple storage drivers 
+- storage driver allow one to work with underlying storage devices,
+- diff storage drivers,
+    1. overlay
+    2. aufs
+    3. brtfs
 ## 4. DATA Volumes:
 
 **2 ways to manage data in  docker** 
@@ -78,7 +70,7 @@ brtfs
 
 container can communicate with other container and also with docker host.
 
-docker network ls: lists all networks associated with docker on the host
+> docker network ls: lists all networks associated with docker on the host
 
 
 
